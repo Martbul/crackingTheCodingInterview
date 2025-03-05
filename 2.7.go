@@ -10,51 +10,51 @@ type TailAndSize struct {
 	Size int
 }
 
-type Node struct {
-	Value int
-	Next  *Node
-}
+///type Node struct {
+//	Value int
+//	Next  *Node
+//}
 
-type LinkedList struct {
-	Head *Node
-}
+//type LinkedList struct {
+//	Head *Node
+//}
 
-func (list *LinkedList) Add(value int) {
-	if list.Head == nil {
-		list.Head = &Node{Value: value}
-		return
-	}
-	current := list.Head
-	for current.Next != nil {
-		current = current.Next
-	}
-	current.Next = &Node{Value: value}
-}
+//func (list *LinkedList) Add(value int) {
+//	if list.Head == nil {
+//		list.Head = &Node{Value: value}
+//		return
+//	}
+//	current := list.Head
+//	for current.Next != nil {
+//		current = current.Next
+//	}
+//	current.Next = &Node{Value: value}
+//}
 
-func (list *LinkedList) Display() {
-	current := list.Head
-	for current != nil {
-		fmt.Printf("%d -> ", current.Value)
-		current = current.Next
-	}
-	fmt.Println("nil")
-}
+//func (list *LinkedList) Display() {
+//	current := list.Head
+//	for current != nil {
+//		fmt.Printf("%d -> ", current.Value)
+///		current = current.Next
+//	}
+//	fmt.Println("nil")
+//}
 
-func main() {
-	common := &Node{Value: 7, Next: &Node{Value: 8, Next: &Node{Value: 9}}}
-	headA := &Node{Value: 1, Next: &Node{Value: 2, Next: &Node{Value: 3, Next: common}}}
-	headB := &Node{Value: 4, Next: &Node{Value: 5, Next: common}}
+//func main() {
+//	common := &Node{Value: 7, Next: &Node{Value: 8, Next: &Node{Value: 9}}}
+//	headA := &Node{Value: 1, Next: &Node{Value: 2, Next: &Node{Value: 3, Next: common}}}
+//	headB := &Node{Value: 4, Next: &Node{Value: 5, Next: common}}
 
-	intersection := intersectionNodes(headA, headB)
+//	intersection := intersectionNodes(headA, headB)
 
-	// Displaying the result
-	if intersection != nil {
-		fmt.Printf("Intersection at node with value: %d\n", intersection.Value)
-	} else {
-		fmt.Println("No intersection")
-	}
+// Displaying the result
+//	if intersection != nil {
+//		fmt.Printf("Intersection at node with value: %d\n", intersection.Value)
+//	} else {
+///		fmt.Println("No intersection")
+//	}
 
-}
+//}
 
 func intersectionNodes(headA *Node, headB *Node) *Node {
 	if headA == nil || headB == nil {
