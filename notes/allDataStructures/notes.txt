@@ -1,0 +1,10 @@
+Array
+LinkedList(signly & doubly)
+Stack
+Queue
+Tree
+Tries(Prefix tree)
+Min/max heap
+Graph
+Hashmap
+
